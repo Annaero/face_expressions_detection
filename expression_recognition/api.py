@@ -49,7 +49,7 @@ def read_landmarks(files):
 
             norm_coordinates = _normalize_landmarks(xlist, ylist)
             landmarks.append(norm_coordinates)
-    return landmarks
+    return np.stack(landmarks)
 
 
 def compute_landmarks(files, indexes=False):

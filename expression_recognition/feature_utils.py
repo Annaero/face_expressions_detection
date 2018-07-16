@@ -20,7 +20,6 @@ def get_mouthes_only(dataset):
         np.array: dataset of mouth landmarks
 
     """
-
     indexes = np.arange(48, 68) #maybe magic values should be moved to the config
     return dataset[:, indexes, :]
 
