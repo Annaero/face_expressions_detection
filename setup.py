@@ -16,7 +16,7 @@ requirements = [
 
 setup(
     name='expression_detector',
-    version='0.1.2',
+    version='0.1.3',
     description="Recognize face expressions from Python or from the command line",
     author="Aleksei Krikunov",
     author_email='alexey.v.krikunov@yandex.ru',
