@@ -70,7 +70,7 @@ def compute_landmarks(files, indexes=False):
 
     for f in files:
         img = io.imread(f)
-        norm_coordinates = get_landmarks(img)
+        norm_coordinates = _get_landmarks(img)
 
         if norm_coordinates is not None:
             indexes.append(1)
@@ -85,7 +85,16 @@ def compute_landmarks(files, indexes=False):
     return ret, indexes
 
 
-def get_landmarks(image):
+def _get_landmarks(image):
+    """Detect faces on image and compute landmarks on face.
+    In current verion find landmarks only for first founded face.
+
+    Args:
+        image (str): path to the image file
+    Returns:
+        np.array: landmarks
+
+    """
     detections = face_detector(image, 1)
     
     if not detections:
